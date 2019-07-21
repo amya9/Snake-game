@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+		
+		canvas{
+       border:15px solid red;
+       margin: 0px 25%;
+       display: block;
+
+		}
+
+.split {
+  height: 652px;
+  width: 389px;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+ padding-bottom: 0px;
+}
+
+.left {
+	  border:15px solid red;
+width: 368px;
+  left: 0;
+  margin-top: 8px;
+  background-color: #111;
+  color: white;
+}
+
+.right {
+	  width: 420px;
+	  border:15px solid red;
+	  margin-top: 8px;
+	  margin-right: 0px;
+
+  right: 0;
+  background-color: black;
+}
+.pause{
+	float: right;
+}
+.play{
+	float: right;
+}
+	</style>
+	<title>simple snake game</title>
+</head>
+<body>
+	<!-- <div id="score"> score</div> -->
+<!-- 	 <i id="pause" class="fa fa-pause fa-lg"></i> 
+	  <i id="play" class="fa fa-play fa-lg"></i>  -->
+	  <div class="split left" id="menu">
+	  	<table>
+	  		<tr>
+	  	<td style="font-size: 43px">PAUSE :</td>
+	  	  <td><br>
+	  	  	<button class="pause" id="pause" onclick="pause()"> <i  class="fa fa-pause fa-3x"></i></button> </td>
+	  	
+        </tr>
+      <tr>
+      	<td style="font-size: 43px">PLAY :</td>
+	  <td><br>	
+	  	<button class="play" id="play" onclick="play()"><i  class="fa fa-play fa-3x"></i></button></td>
+	     </tr>
+	     <tr> 
+	   <td style="font-size: 25px"><strong>Speed:</strong> </td>
+	</tr>
+	<tr>
+           <td>
+           	<input id="speed1" type="radio" name="speed" value="120">
+            <label for="speed1">Slow</label></td>
+          <tr>
+
+           <td><input id="speed2" type="radio" name="speed" value="75"/>
+           <label for="speed2">Normal</label></td>
+           </tr>
+           
+
+           <tr>
+
+           <td><input id="speed3" type="radio" name="speed" value="35"/>
+
+            <label for="speed3">Fast</label></td>
+ 
+	 
+	 </tr>
+	 <tr>
+	 	<td><br><br>
+	 		<button id="score" onclick="highscore();" style="font-size: 30px" value="HighScore">HighScore</button>
+	 	</td>
+	 	<td> <div id="highscore" style="color: red"></div></td>
+	 </tr>
+       </table>
+	  </div>
+	  <div class="split right" id="result">
+	  	 <table>
+	  	 	<tr>
+	  	 		<td style="font-size: 50px; color: pink">Your Score is :</td><br>
+	  	 		<td id="myscore" style="color: red; font-size: 50px"></td>
+	  	 	</tr>
+	  	 </table>
+         
+	  </div>
+  <canvas id="snake" width="672" height="672" ></canvas>
+  <script src="snake.js"></script>
+  <script >
+  
+
+  </script>
+</body>
+</html>
